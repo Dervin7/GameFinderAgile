@@ -8,7 +8,13 @@ namespace GameFinder.Models
     public class UserAccount
     {
         public int Id { get; set; }
+
+        [Required]
+        [MinLength(7)]
         public string Username { get; set; }
+
+        [Required]
+        [MinLength(7)]
         public string Password { get; set; }
         public datetime AccountCreated { get; set; }
     }
